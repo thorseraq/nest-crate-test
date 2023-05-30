@@ -10,4 +10,7 @@ yrs = { version = "0.16.5" }
 patch-crate-test = { path = ".." }
 
 [patch.crates-io]
-#yrs = { git = "https://github.com/toeverything/y-crdt", rev = "a700f09" } # uncomment this line to fix the issue
+#yrs = { git = "https://github.com/toeverything/y-crdt", rev = "a700f09" }
+
+# nest-lib is not a sub crate of patch-crate-test, even it's in the sub directory of patch-crate-test.
+#So [patch.crates-io] in patch-crate-test won't have effect on nest-lib. Need manually uncomment the above line
